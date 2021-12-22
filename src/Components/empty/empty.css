@@ -1,0 +1,10 @@
+.empty{
+    display: flex;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty > h1{
+    color: rgb(133, 132, 132);
+}

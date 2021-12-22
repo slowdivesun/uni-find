@@ -1,0 +1,70 @@
+.card{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center{
+    border: 1px solid black;
+    padding: 25px;
+    box-shadow: 0px 4px 16px 0px #bfbfbf;
+    min-width: 300px;
+    /* height: 50vh; */
+}
+
+
+input[type='checkbox']{
+    display: none;
+}
+
+.lbl-toggle{
+    font-weight: bold;
+    cursor: pointer;
+    transform: all 0.25 ease-out;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.collapsible-content .content-inner {
+background: rgba(250, 224, 66, .2);
+border-bottom: 1px solid rgba(250, 224, 66, .45);
+padding: .5rem 1rem;
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited{
+    
+}

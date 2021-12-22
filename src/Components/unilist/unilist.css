@@ -1,0 +1,29 @@
+.uniList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.box{
+    width: 25vw;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+    /* overflow: scroll; */
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:visited{
+    color: black;
+}
