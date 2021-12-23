@@ -19,3 +19,7 @@
   <p align="center">Uni Details page</p>
 </p>
 
+<p align="center">
+  <img src="https://github.com/slowdivesun/uni-find/blob/master/public/wrong.jpg">
+  <p align="center">Wrong input page</p>
+</p>
