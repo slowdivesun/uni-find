@@ -11,7 +11,7 @@ class Find extends Component{
     }
 
     findfunc = () => {
-        fetch('https://universities.hipolabs.com/search?country='+this.state.query)
+        fetch('http://universities.hipolabs.com/search?country='+this.state.query)
         .then(res => res.json())
         .then((data) => {
             console.log(data)
