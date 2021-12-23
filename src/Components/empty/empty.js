@@ -1,8 +1,9 @@
 import './empty.css'
 
-const Empty = () => {
+const Empty = (props) => {
+    const {msg} = props
     return (
-        <div className="empty"><h1>empty...</h1></div>
+        <div className="empty"><h1>{msg}</h1></div>
         
     )
 }

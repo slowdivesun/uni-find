@@ -7,10 +7,12 @@ class Find extends Component{
     state = {
         query:'anywhere',
         uni: [],
-        found: false
+        found: false,
+        searching: false
     }
 
     findfunc = () => {
+        this.setState({searching: true})
         fetch('http://universities.hipolabs.com/search?country='+this.state.query)
         .then(res => res.json())
         .then((data) => {
@@ -18,7 +20,7 @@ class Find extends Component{
             for (let i=0; i<data.length; i++){
                 data[i]["id"] = i+1;
             }
-          this.setState({ uni: data, found: true })
+          this.setState({ uni: data, found: true, searching: false })
         }).catch(console.log)
     }
 
@@ -35,7 +37,8 @@ class Find extends Component{
         this.setState(
             {query: event.target.value,
             uni: [],
-            found: false
+            found: false,
+            searching: false
         }
         )
     }
@@ -43,11 +46,12 @@ class Find extends Component{
     render(){
         const {uni, query, found} = this.state;
         return (
-            <div><div className="find">
+            <div className='findWrapper'>
+                <div className="find">
                 <input placeholder='Enter country, click find' type="search" onChange={this.enter} />
                 <button onClick={this.findfunc}>FIND</button>
-                </div>{uni.length>0 ? <Unilist uni={uni}/> : found ? 'Sorry :( No valid matches':null}
-            {uni.length===0 && <Empty/>}</div>
+                </div>{uni.length>0 ? <Unilist uni={uni}/> : found ? <Empty msg="sorry :( no valid matches" />:null}
+            {uni.length===0 && <Empty msg="empty..."/>}</div>
             
         )
     }

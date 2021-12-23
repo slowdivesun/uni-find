@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <div className='card'>
             <div className='center'>
-                <h1>{uni.name}</h1>
+                <h1 className='uniTitle'>{uni.name}</h1>
                 <p>Country: {uni.country}</p>
                 <p>State/Province: {uni["state-province"] ? uni["state-province"] : "Unavailable"}</p>
                 <div class='collapseWrap'>
