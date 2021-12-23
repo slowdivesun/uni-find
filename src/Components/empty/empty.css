@@ -7,4 +7,6 @@
 
 .empty > h1{
     color: rgb(208, 208, 208);
+    font-size: 60px;
+    text-align: center;
 }
