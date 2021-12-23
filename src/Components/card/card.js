@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './card.css'
 
 const Card = (props) => {
@@ -17,12 +18,18 @@ const Card = (props) => {
                     <div className="collapsible-content">
                         <ul className="content-inner">
                             {uni.web_pages.map(each => {
-                                return<li><a href={each} key={each.id}>{each}</a></li> 
+                                return<li><a href={each}>{each}</a></li> 
                             })}
                         </ul>
                     </div>
                 </div>
             </div>
+            <Link to="/">
+            <div className='back'>
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            </Link>
+            
         </div>
     )
 }
