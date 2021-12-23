@@ -4,7 +4,7 @@
 ## Screenshots of the Website
 
 <p align="center">
-  <img src="https://github.com/slowdivesun/uni-find/blob/master/public/home.jpg">
+  <img src="https://github.com/slowdivesun/uni-find/blob/master/public/homepage.jpg">
   <p align="center">Home page</p>
 </p>
 
