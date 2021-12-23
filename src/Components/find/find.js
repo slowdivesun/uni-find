@@ -25,15 +25,6 @@ class Find extends Component{
         }).catch(console.log)
     }
 
-    // componentDidMount() {
-    //     fetch('http://universities.hipolabs.com/search?country=India')
-    //     .then(res => res.json())
-    //     .then((data) => {
-    //         console.log(data)
-    //       this.setState({ uni: data })
-    //     }).catch(console.log)
-    // }
-
     enter = (event) => {
         this.setState(
             {query: event.target.value,
@@ -47,12 +38,12 @@ class Find extends Component{
         const {uni, found} = this.state;
         return (
             <div className='findWrapper'>
-                    <div className="find">
+                <div className="find">
                     <span className='logo'>UNI FIND</span>
                     <div className='uniInput'><input placeholder='Enter country, click find' type="search" onChange={this.enter} />
                     <button onClick={this.findfunc}>FIND</button>
-                    </div></div>
-                
+                    </div>
+                </div> 
                 {uni.length>0 ? <Unilist uni={uni}/> : found ? <Empty msg="sorry :( no valid matches" />:null}
                 {uni.length===0 && found===false && <Empty msg="enter a query..."/>}
             </div>

@@ -1,6 +1,6 @@
 import './App.css';
 import Find from './Components/find/find';
-import {  BrowserRouter as Router, Switch, Route, useLocation} from "react-router-dom";
+import {  BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Details from './pages/details/details';
 
 function App() {

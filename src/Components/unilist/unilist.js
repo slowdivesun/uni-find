@@ -10,7 +10,6 @@ const Unilist = (props) => {
                     pathname: "/details",
                     state:{uni: each}
                 }}><div className="box" key={each.id}>{each.name}</div></Link>)}
-            
         </div>
     )
 }
