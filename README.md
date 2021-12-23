@@ -2,5 +2,5 @@
 
 <p align="center">
   <img src="https://github.com/slowdivesun/uni-find/blob/master/public/uni_page.jpg">
-  <p>Uni Details page</p>
+  <p align="center">Uni Details page</p>
 </p>
