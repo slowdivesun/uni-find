@@ -15,11 +15,11 @@ const Card = (props) => {
                     <input id="copllapsible" className="toggle" type="checkbox"/>
                     <label htmlFor="copllapsible" className="lbl-toggle">Visit</label>
                     <div className="collapsible-content">
-                        <div className="content-inner">
+                        <ul className="content-inner">
                             {uni.web_pages.map(each => {
-                                return <a href={each} key={each.id}>{each}</a>
+                                return<li><a href={each} key={each.id}>{each}</a></li> 
                             })}
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@
     align-items: center;
     background: linear-gradient(90deg, #1d976c, #93f9b9);
     font-family: 'Josefin Sans', sans-serif;
+    /* background-image: url("uni_img.jpg"); */
 }
 
 .center{
@@ -70,10 +71,11 @@ a{
     color: blue;
 }
 
-a:visited{
-    
-}
 
 .uniTitle{
     text-align: center;
+}
+
+ul{
+    list-style: none;
 }

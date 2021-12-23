@@ -13,7 +13,7 @@
     height: 100px;
     padding: 10px;
     /* border: 1px solid black; */
-    min-width: 300px;
+    min-width: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,11 +34,6 @@
 
 .link:visited{
     color: black;
-}
-
-.inner-box{
-    /* width: 25vw; */
-    /* height: 100px; */
 }
 
 .gridDetails{

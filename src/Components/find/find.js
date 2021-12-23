@@ -8,19 +8,20 @@ class Find extends Component{
         query:'anywhere',
         uni: [],
         found: false,
-        searching: false
     }
 
     findfunc = () => {
-        this.setState({searching: true})
         fetch('http://universities.hipolabs.com/search?country='+this.state.query)
         .then(res => res.json())
         .then((data) => {
             console.log(data)
             for (let i=0; i<data.length; i++){
                 data[i]["id"] = i+1;
+                if (data[i]["web_pages"].length > 1){
+                    console.log(data[i])
+                }
             }
-          this.setState({ uni: data, found: true, searching: false })
+          this.setState({ uni: data, found: true })
         }).catch(console.log)
     }
 
@@ -38,20 +39,23 @@ class Find extends Component{
             {query: event.target.value,
             uni: [],
             found: false,
-            searching: false
         }
         )
     }
 
     render(){
-        const {uni, query, found} = this.state;
+        const {uni, found} = this.state;
         return (
             <div className='findWrapper'>
-                <div className="find">
-                <input placeholder='Enter country, click find' type="search" onChange={this.enter} />
-                <button onClick={this.findfunc}>FIND</button>
-                </div>{uni.length>0 ? <Unilist uni={uni}/> : found ? <Empty msg="sorry :( no valid matches" />:null}
-            {uni.length===0 && <Empty msg="empty..."/>}</div>
+                    <div className="find">
+                    <span className='logo'>UNI FIND</span>
+                    <div className='uniInput'><input placeholder='Enter country, click find' type="search" onChange={this.enter} />
+                    <button onClick={this.findfunc}>FIND</button>
+                    </div></div>
+                
+                {uni.length>0 ? <Unilist uni={uni}/> : found ? <Empty msg="sorry :( no valid matches" />:null}
+                {uni.length===0 && found===false && <Empty msg="enter a query..."/>}
+            </div>
             
         )
     }

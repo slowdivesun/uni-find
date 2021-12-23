@@ -1,12 +1,19 @@
 .find{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 20vh;
-    width: 90vw;
+    width: 95vw;
     margin: 0 5vw;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    /* border-bottom: 1px solid rgb(0, 0, 0); */
+    /* box-shadow: ; */
+    position: sticky;
+    top: 0;
+    margin-left: 0;
+    background: linear-gradient(90deg, #1d976c, #5fc484);
+    z-index: 999;
+    
 }
 
 input{
@@ -28,8 +35,43 @@ button{
     cursor: pointer;
     background-color: white;
     border-radius: 7px;
+    margin-left: 10px;
 }
 
 button:hover{
     background-color: rgb(228, 228, 228);
 }
+
+.uniInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logo{
+    width: 10px;
+    color: white;
+    font-weight: 1000;
+    font-size: 30px;
+    margin-left: 5vw;
+}
+
+@media screen  and (max-width: 450px) {
+    .find{
+        flex-direction: column;
+        margin-right: 0;
+        align-items: center;
+        width: 100vw;
+        height: 25vh;
+    }
+
+    .logo{
+        width: 100px;
+        text-align: center;
+    }
+
+    .uniInput{
+        margin: 0;
+    }
+  }
