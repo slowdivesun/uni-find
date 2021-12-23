@@ -6,7 +6,7 @@
     align-items: center;
     background: linear-gradient(90deg, #1d976c, #93f9b9);
     font-family: 'Josefin Sans', sans-serif;
-    /* background-image: url("uni_img.jpg"); */
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(189, 189, 189, 0.5)),url("https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .center{
@@ -47,7 +47,6 @@ input[type='checkbox']{
 }
 
 .collapsible-content .content-inner {
-background: #4fc99e;
 /* border-bottom: 1px solid rgba(250, 224, 66, .45); */
 padding: .5rem 1rem;
 }
