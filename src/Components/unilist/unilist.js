@@ -12,7 +12,9 @@ const Unilist = (props) => {
                 }}>
                     <div className="box" key={each.id}>
                         {each.name}
-                        <span className='uniIconContainer'></span>
+                        <span className='uniIconContainer'>
+                            <i className="uniRightIcon fas fa-chevron-right"></i>
+                        </span>
                     </div>
                 </Link>)}
         </div>
