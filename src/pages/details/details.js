@@ -1,17 +1,16 @@
 import { useLocation } from "react-router-dom"
 import Card from "../../Components/card/card"
+import Empty from "../../Components/empty/empty"
 
 const Details = () => {
     const location = useLocation()
-    console.log(location.uni)
-    const uni = location.state.uni
-    
-    if (location.uni===undefined){
-        console.log('it is undef')
-    }
-    return (
+    // let uni
+    // else{
+    //     uni = location.state.uni
+    // }
+    return (location.state===undefined)?<Empty msg="error, go to homepage"/>:(
         <div>
-            <Card uni={uni}/>
+            <Card uni={location.state.uni}/>
         </div>
     )
 }

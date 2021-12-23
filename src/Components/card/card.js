@@ -11,17 +11,16 @@ const Card = (props) => {
                 <h1 className='uniTitle'>{uni.name}</h1>
                 <p>Country: {uni.country}</p>
                 <p>State/Province: {uni["state-province"] ? uni["state-province"] : "Unavailable"}</p>
-                <div class='collapseWrap'>
+                <div className='collapseWrap'>
                     <input id="copllapsible" className="toggle" type="checkbox"/>
-                    <label for="copllapsible" className="lbl-toggle">Visit</label>
+                    <label htmlFor="copllapsible" className="lbl-toggle">Visit</label>
                     <div className="collapsible-content">
                         <div className="content-inner">
                             {uni.web_pages.map(each => {
-                                return <a href={each}>{each}</a>
+                                return <a href={each} key={each.id}>{each}</a>
                             })}
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
