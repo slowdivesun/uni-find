@@ -32,10 +32,6 @@
     text-decoration: none;
 }
 
-.link:visited{
-    color: black;
-}
-
 .gridDetails{
     margin-top: 5px;
     color: rgb(76, 76, 206);

@@ -4,9 +4,9 @@ import Empty from "../../Components/empty/empty"
 
 const Details = () => {
     const location = useLocation()
-    return (location.state===undefined)?<Empty msg="error, go to homepage"/>:(
+    return (location.state === undefined) ? <Empty msg="error, go to homepage" /> : (
         <div>
-            <Card uni={location.state.uni}/>
+            <Card uni={location.state.uni} />
         </div>
     )
 }

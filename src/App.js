@@ -1,6 +1,6 @@
 import './App.css';
 import Find from './Components/find/find';
-import {  BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Details from './pages/details/details';
 
 function App() {
@@ -8,10 +8,10 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Find/>
+          <Find />
         </Route>
         <Route path="/details" >
-          <Details/>
+          <Details />
         </Route>
       </Switch>
     </Router>
